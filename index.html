@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en"> <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header id="navigation">
+        <div class="logo">
+            <img class="logo" src="Images/name cursive.png" alt="logo">
+        </div>
+            <ul class="navLinks">
+                <li><a href="#">Work</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a class="cta" href="#"><button>Download Resume</button></a>
+            <i class="menu-toggle-btn fas fa-bars"></i>
+        </nav>
+    </header>
+
+    <section class="textBox">
+        <h2 class="text"> -Hi there!-Hi there!</h2>
+    </section>
+    <script>
+        //now, split text in letters
+        const text = document.querySelector('.text');
+        text.innerHTML = text.textContent.replace(/\S/g,"<span>$&</span>");
+
+        const element = document.querySelectorAll('span'); for(let i = 0; i<element.length; i++){element[i].style.transform = "rotate("+i*20+"deg)"}
+
+        document.addEventListener("mousemove", function(e) 
+        {
+            text.style.left = e.pageX + 'px';
+            text.style.top = e.pageY + 'px';
+        })
+    </script>
+
+<section class="heroImg">
+    <div class="content">        
+        <h1 class="hiim">Hi! I'm<span class="me"> Sydney</span>
+        <h2 id="introLine2">I'm a UX/UI designer with a background in graphic design.</h2>
+        <p id="aboutMe">I am passionate about connecting people and technology through simple and delightful interface design. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur cursus ullamcorper egestas nullam ipsum ornare euismod eu.</p>
+        <p id="freelance"> I am currently accepting freelance work. Feel free to <a class="reachOut">reach out!</a></p>
+    </div>
+    <div class="picture">
+        <img src="Images/D50A1705-3312-4F3E-A8BC-29E641411A38.jpg" alt-="profilePic" class="profilePic">
+    </div>
+</section>
+
+<section id="mySkills">
+    <h1 class="skillsTitle">My UX Skills</h1>
+    <div class="flexContainer">
+        <div class="skill1">
+            <img src="Images/recruitmentcolored.png" class="img">
+            <h1 class="skillTitle">User Research</h1>
+            <p class="skillDescription">lorem ipsum aslkjf slkdjf sldjf a;skdjf sldtha ;slkdj fjsldkjf slkdjf aslkdf jfsldjfa;lksdf;ljf</p>
+        </div>
+        <div class="skill2">
+            <img src="Images/colordesign.png" class="img">
+            <h1 class="skillTitle">User Interface Design</h1>
+            <p class="skillDescription">Lorem ipsum alskdjf ldkfjlsk fjalskjf;lksdjlkthsdfkt htksjhtu skth t;.s htsthkksjjf lskdjthsuh gsg;khtts ths</p>
+        </div>
+        <div class="skill3">
+            <img src="Images/webdesigncolored.png" class="img">
+            <h1 class="skillTitle">Website Development</h1>
+            <p class="skillDescription">Lorem ipsum alskdjf ldkfjlsk fjalskjf;lksdjlkthsdfkt htksjhtu skth t;.s htsthkksjjf lskdjthsuh gsg;khtts ths</p>
+        </div>
+    </div>
+</section>
+
+<section class="myWork">
+    <h1 class="myWorkTitle">My Work</h1>
+    <div class="workGrid">
+        <div class="healtheory">
+            <img src="Images/Healtheory case study.png" alt="healtheoryPic" class="healtheoryPic">
+            <h3 class="projectTitle">Healtheory Mobile App</h3>
+            <p class="aboutProject">Product Design / 2022</p>
+            <button class="viewProject">View Project</button>
+        </div>
+        <div class="pio">
+            <img src="Images/PIO_merch_mockup.png" alt="pio" class="pioPic">
+            <h3 class="projectTitle">Pacific Islanders Organization</h3>
+            <p class="aboutProject">Graphic Design / 2021</p>
+            <button>View Project</button>
+        </div>
+        <div class="usps">
+            <img src="Images/USPS truck background.png" alt="usps" class="uspsPic">
+            <h3 class="projectTitle">USPS Rebrand</h3>
+            <p class="aboutProject">Graphic Design / 2020</p>
+            <button>View Project</button>
+        </div>
+    </div>
+    <a class="viewAllProjects" href="#">View All Projects</a>
+</section>
+
+<script src="js/index.js"></script>
+</body>
+</html>
